@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Traits\ModelTrait;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,11 +12,10 @@ use App\Traits\ModelTrait;
 |
 */
 
-Route::get('/', function () {
-    $slides = ModelTrait::getSlides();
-    return view('welcome',compact('slides'));
+Route::get('/', [App\Http\Controllers\LandingController::class,'index']);
+Route::prefix(URI['landing'])->group(function(){
+    Route::get('/{any?}', [App\Http\Controllers\LandingController::class,'getPages']);
 });
-
 Auth::routes();
 Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class,'logout']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

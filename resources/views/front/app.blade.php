@@ -13,19 +13,19 @@
     <link rel="shortcut icon" href="/favicon_io/favicon.ico" />
 
     <!-- Bootstrap css-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Materialdesign icon-->
-    <link rel="stylesheet" href="css/materialdesignicons.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/materialdesignicons.min.css" type="text/css" />
 
     <!-- Swiper Slider css -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" type="text/css" />
 
     <!-- Custom Css -->
-    <link href="css/style.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style.min.css" rel="stylesheet" type="text/css" />
 
     <!-- colors -->
-    <link href="css/colors/default.css" rel="stylesheet" type="text/css" id="color-opt" />
+    <link href="/css/colors/default.css" rel="stylesheet" type="text/css" id="color-opt" />
 
 </head>
 
@@ -44,7 +44,7 @@
     </div>
     <!--end page Loader -->
     @include('front.navbar')
-    @include('front.page.home')
+    @yield('content')
     @include('front.page.features')
     @include('front.page.faq')
     @include('front.page.contact')
@@ -84,7 +84,7 @@
                 </div>
                 <!--end modal-header-->
                 <div class="modal-body text-center pt-0">
-                    <img src="images/subscribe.png" alt="subscribe" class="img-fluid" />
+                    <img src="/images/subscribe.png" alt="subscribe" class="img-fluid" />
                     <h5 class="modal-title mt-2 mb-2" id="subscribeform">Subscribe</h5>
                     <p class="text-muted mb-4">
                         Join your hand with us for a better life <br /> and beautiful future.
@@ -144,19 +144,19 @@
 
 
     <!-- Bootstrap Bundale js -->
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
 
     <!-- Swiper Slider js -->
-    <script src="js/swiper-bundle.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
 
     <!-- Contact Js -->
-    <script src="js/contact.js"></script>
+    <script src="/js/contact.js"></script>
 
     <!-- Index-init Js -->
-    <script src="js/index.init.js"></script>
+    <script src="/js/index.init.js"></script>
 
     <!-- App js -->
-    <script src="js/app.js"></script>
+    <script src="/js/app.js"></script>
     <script>
         setColor('success');
     </script>

@@ -2,7 +2,7 @@
 <nav id="navbar" class="navbar navbar-expand-lg fixed-top sticky">
     <div class="container">
         <a class="navbar-brand" href="index-3.html">
-            <img src="images/logo-dark.png" alt="" height="23">
+            <img src="/images/logo-dark.png" alt="" height="23">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -12,14 +12,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="navbar-navlist">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#home">Home</a>
+                    <a class="nav-link active" href="/">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         About <i class="mdi mdi-chevron-down"></i>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="nav-link" href="#blog">Background</a></li>
+                        <li><a class="nav-link" href="/{{URI['landing']}}/bageround">Background</a></li>
                         <li><a class="nav-link" href="#">Vision & Mission</a></li>
                         <li><a class="nav-link" href="#">History</a></li>
                         <li><a class="nav-link" href="#">License</a></li>

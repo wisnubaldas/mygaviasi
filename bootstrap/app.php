@@ -41,11 +41,14 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
-define('URI',['admin'=>hash('sha256','Administrator')]);
+define('URI',[
+            'admin'=>hash('sha256','Administrator'),
+            'landing'=>hash('sha256','Landing Pages'),
+            ]);
 /*
 |--------------------------------------------------------------------------
 | Return The Application
-|--------------------------------------------------------------------------
+|------------------------------------------------------ --------------------
 |
 | This script returns the application instance. The instance is given to
 | the calling script so we can separate the building of the instances
