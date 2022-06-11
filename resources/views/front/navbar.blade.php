@@ -20,9 +20,9 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="nav-link" href="/{{URI['landing']}}/bageround">Background</a></li>
-                        <li><a class="nav-link" href="#">Vision & Mission</a></li>
-                        <li><a class="nav-link" href="#">History</a></li>
-                        <li><a class="nav-link" href="#">License</a></li>
+                        <li><a class="nav-link" href="/{{URI['landing']}}/visimisi">Vision & Mission</a></li>
+                        <li><a class="nav-link" href="/{{URI['landing']}}/history">History</a></li>
+                        <li><a class="nav-link" href="/{{URI['landing']}}/license">License</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">

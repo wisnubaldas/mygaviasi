@@ -17,7 +17,9 @@ class LandingController extends Controller
             case 'bageround':
                 return view('front.page.about');
                 break;
-            
+            case 'visimisi':
+                return view('front.page.visimisi');
+                break;
             default:
                 return abort(404);
                 break;

@@ -7,6 +7,84 @@ namespace App\Traits;
 use App\Models\LandingSlide;
 trait ModelTrait
 {
+    public static function landingMenu()
+    {
+        $l = '/'.URI['landing'];
+        return [
+            [
+                'name' => 'Home',
+                'link' => '/',
+                'children'=>null,
+            ],
+            [
+                'name' => 'Services',
+                'children'=>[
+                    [
+                        'name' => 'Ramp Handling',
+                        'link' => $l.'/ramp',
+                    ],
+                    [
+                        'name' => 'Warehouse Handling',
+                        'link' => $l.'/warehouse',
+                    ],
+                ],
+            ],
+            [
+                'name' => 'Facilities',
+                'children'=>[
+                    [
+                        'name' => 'Flow Domestic',
+                        'link' => $l.'/domestic',
+                    ],
+                    [
+                        'name' => 'Flow International',
+                        'link' => $l.'/international',
+                    ],
+                ],
+            ],
+            [
+                'name' => 'Tracking & Traces',
+                'link' => $l.'/track',
+                'children'=>null,
+            ],
+            [
+                'name' => 'About',
+                'children'=>[
+                    [
+                        'name' => 'Bageround',
+                        'link' => $l.'/bageround',
+                    ],
+                    [
+                        'name' => 'Vision & Mission',
+                        'link' => $l.'/visimisi',
+                    ],
+                    [
+                        'name' => 'History',
+                        'link' => $l.'/history',
+                    ],
+                    [
+                        'name' => 'Galery',
+                        'link' => $l.'/galery',
+                    ],
+                    [
+                        'name' => 'License',
+                        'link' => $l.'/License',
+                    ],
+                ],
+            ],
+            [
+                'name' => 'Contacts',
+                'link' => $l.'/contact',
+                'children'=>null,
+            ],
+            [
+                'name' => 'Login',
+                'link' => '/login',
+                'children'=>null,
+            ],
+            
+        ];
+    }
     public static function menu()
     {
         $admin = URI['admin'];
