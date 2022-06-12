@@ -12,7 +12,7 @@
 <link rel="stylesheet" type="text/css" href="/style/revolution/css/settings.css">
 <link rel="stylesheet" type="text/css" href="/style/revolution/css/layers.css">
 <link rel="stylesheet" type="text/css" href="/style/revolution/css/navigation.css">
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="/style.css">
 <link rel="stylesheet" type="text/css" href="/style/css/color/navy.css">
 <link rel="stylesheet" type="text/css" href="/style/type/icons.css">
 <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800,900,300,200,100' rel='stylesheet' type='text/css'>
@@ -25,7 +25,12 @@
 <![endif]-->
 </head>
 <body class="box-layout">
-
+  <div id="preloader">
+    <div class="textload">Loading</div>
+    <div id="status">
+      <div class="spinner"></div>
+    </div>
+  </div>
 <div class="content-wrapper">
   @include('marello.navbar')
   @yield('content')

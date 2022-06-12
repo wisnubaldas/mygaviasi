@@ -1,16 +1,32 @@
 @extends('marello.app',['page'=>'Home'])
 @section('content')
-  @include('marello.component.slider')
+@include('marello.component.slider')
+<div class="dark-wrapper">
+  <div class="container inner2">
+    <div class="carousel-wrapper">
+      <div class="carousel clients">
+        <div class="item"> <img src="style/images/art/c1.png" alt="" /> </div>
+        <div class="item"> <img src="style/images/art/c2.png" alt="" /> </div>
+        <div class="item"> <img src="style/images/art/c3.png" alt="" /> </div>
+        <div class="item"> <img src="style/images/art/c4.png" alt="" /> </div>
+        <div class="item"> <img src="style/images/art/c5.png" alt="" /> </div>
+        <div class="item"> <img src="style/images/art/c6.png" alt="" /> </div>
+        <div class="item"> <img src="style/images/art/c7.png" alt="" /> </div>
+        <div class="item"> <img src="style/images/art/c8.png" alt="" /> </div>
+        <div class="item"> <img src="style/images/art/c9.png" alt="" /> </div>
+        <div class="item"> <img src="style/images/art/c10.png" alt="" /> </div>
+      </div>
+      <!--/.carousel --> 
+    </div>
+    <!--/.carousel-wrapper --> 
+    
+  </div>
+  <!--/.container --> 
+</div>
+<!--/.dark-wrapper -->
   @include('marello.component.light')
   
-  <div class="dark-wrapper">
-    <div class="container inner">
-      <p class="lead text-center bm25">Let's make something <em>great</em> together.</p>
-      <div class="text-center"> <a href="#" class="btn btn-large fixed-width">View Our Works</a> <a href="#" class="btn btn-large btn-red fixed-width">Get in Touch</a> </div>
-    </div>
-    <!-- /.container --> 
-  </div>
-  <!-- /.dark-wrapper -->
+  
   
   <div class="parallax xs-center" data-parallax-img="style/images/art/parallax2.jpg" data-parallax-img-width="1920" data-parallax-img-height="1123">
     <div class="container inner">
@@ -26,7 +42,6 @@
     <!-- /.container --> 
   </div>
   <!-- /.parallax -->
-  
-  
+
   <!-- /.light-wrapper --> 
 @endsection

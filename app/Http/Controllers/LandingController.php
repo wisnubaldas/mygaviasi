@@ -8,18 +8,20 @@ class LandingController extends Controller
 {
     public function index()
     {
-        $slides = self::getSlides();
-        return view('welcome',compact('slides'));
+        return view('welcome');
     }
     public function getPages($page = null)
     {
         switch ($page) {
-            case 'bageround':
-                return view('front.page.about');
+            case 'ramp':
+                return view('marello.page.ramp');
                 break;
-            case 'visimisi':
-                return view('front.page.visimisi');
+            case 'warehouse':
+                return view('marello.page.warehouse');
                 break;
+            case 'domestic':
+                    return view('marello.page.flow_domestic');
+                    break;
             default:
                 return abort(404);
                 break;
