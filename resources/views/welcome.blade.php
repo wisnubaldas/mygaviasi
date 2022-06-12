@@ -1,20 +1,22 @@
 @extends('marello.app',['page'=>'Home'])
 @section('content')
 @include('marello.component.slider')
+<style>
+  .clients img:hover {
+    -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(80%);
+  }
+</style>
 <div class="dark-wrapper">
   <div class="container inner2">
     <div class="carousel-wrapper">
       <div class="carousel clients">
-        <div class="item"> <img src="style/images/art/c1.png" alt="" /> </div>
-        <div class="item"> <img src="style/images/art/c2.png" alt="" /> </div>
-        <div class="item"> <img src="style/images/art/c3.png" alt="" /> </div>
-        <div class="item"> <img src="style/images/art/c4.png" alt="" /> </div>
-        <div class="item"> <img src="style/images/art/c5.png" alt="" /> </div>
-        <div class="item"> <img src="style/images/art/c6.png" alt="" /> </div>
-        <div class="item"> <img src="style/images/art/c7.png" alt="" /> </div>
-        <div class="item"> <img src="style/images/art/c8.png" alt="" /> </div>
-        <div class="item"> <img src="style/images/art/c9.png" alt="" /> </div>
-        <div class="item"> <img src="style/images/art/c10.png" alt="" /> </div>
+        <div class="item"> <img src="style/images/art/z1.png" alt="" /> </div>
+        <div class="item"> <img src="style/images/art/z2.png" alt="" /> </div>
+        <div class="item"> <img src="style/images/art/z3.png" alt="" /> </div>
+        <div class="item"> <img src="style/images/art/z4.png" alt="" /> </div>
+        <div class="item"> <img src="style/images/art/z5.png" alt="" /> </div>
+        <div class="item"> <img src="style/images/art/z6.png" alt="" /> </div>
       </div>
       <!--/.carousel --> 
     </div>

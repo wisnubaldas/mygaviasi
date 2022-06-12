@@ -43,7 +43,7 @@ $app->singleton(
 
 define('URI',[
             'admin'=>hash('sha256','Administrator'),
-            'landing'=>hash('sha256','Landing Pages'),
+            'landing'=>hash('sha256',hash('sha256','Landing Pages')),
             ]);
 /*
 |--------------------------------------------------------------------------

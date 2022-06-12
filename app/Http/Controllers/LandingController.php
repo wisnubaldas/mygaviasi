@@ -22,6 +22,31 @@ class LandingController extends Controller
             case 'domestic':
                     return view('marello.page.flow_domestic');
                     break;
+            case 'international':
+                return view('marello.page.flow-international');
+                break;
+            case 'bageround':
+                return view('marello.page.bageround');
+                break;
+            case 'visimisi':
+                return view('marello.page.visimisi');
+                break;
+            case 'history':
+                return view('marello.page.history');
+                break;
+            case 'galery':
+                $galery = self::getGalery();
+                return view('marello.page.galery',compact('galery'));
+                break;
+            case 'License':
+                return view('marello.page.license');
+                break;
+            case 'contact':
+                return view('marello.page.contact');
+                break;
+            case 'track':
+                return view('marello.page.tract');
+                break;
             default:
                 return abort(404);
                 break;

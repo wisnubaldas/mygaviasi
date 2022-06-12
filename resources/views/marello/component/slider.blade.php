@@ -26,7 +26,7 @@
                     data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" 
                     data-start="2000" data-splitin="none" data-splitout="none" 
                     data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-size: 30px; line-height: 30px;">
-                    <a href="/ramp" class="btn btn-large">View Detail</a></div>
+                    <a href="/{{URI['landing']}}/ramp" class="btn btn-large">View Detail</a></div>
         </li>
         <li data-transition="fade">
             <img src="style/images/art/slider-bg2.jpg" style='background-color:#303030' alt="">
@@ -53,7 +53,7 @@
                     data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" 
                     data-start="2000" data-splitin="none" data-splitout="none" data-responsive_offset="on" 
                     style="z-index: 7; white-space: nowrap; font-size: 30px; line-height: 30px;">
-                    <a href="#" class="btn btn-large btn-border light">Get in Touch</a>
+                    <a href="/{{URI['landing']}}/warehouse" class="btn btn-large btn-border light">Get in Touch</a>
             </div>
         </li>
         <li data-transition="fade">
