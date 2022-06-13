@@ -2,7 +2,6 @@
 @section('content')
 <div class="light-wrapper">
   <div class="container inner">
-    <p class="lead">Morello is a <em>flat</em> and <em>responsive</em> site template with tons of features, built with Twitter Bootstrap. You can easily create a <em>unique</em> and <em>professional</em> looking site.</p>
     <div class="divide25"></div>
     <div class="portfolio-grid col4">
       <div class="isotope-filter button-group">

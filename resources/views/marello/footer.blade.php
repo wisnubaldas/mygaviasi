@@ -17,11 +17,11 @@
             <ul class="post-list">
               <li>
                 <div class="meta"><span class="date">3th Oct 2012</span> </div>
-                <p> <a href="blog-post.html">Etiam porta sem malesuada magna mollis euismod ullamcorper nulla</a> </p>
+                <p> <a href="#">Etiam porta sem malesuada magna mollis euismod ullamcorper nulla</a> </p>
               </li>
               <li>
                 <div class="meta"><span class="date">28th Sep 2012</span> </div>
-                <p> <a href="blog-post.html">Ornare nullam risus non metus auctor fringilla fermentum justo</a> </p>
+                <p> <a href="#">Ornare nullam risus non metus auctor fringilla fermentum justo</a> </p>
               </li>
             </ul>
             <!-- /.post-list --> 
