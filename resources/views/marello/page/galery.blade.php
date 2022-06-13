@@ -2,7 +2,7 @@
 @section('content')
 <div class="light-wrapper">
   <div class="container inner">
-    <div class="divide25"></div>
+    {{-- <div class="divide25"></div> --}}
     <div class="portfolio-grid col4">
       <div class="isotope-filter button-group">
         <ul>
