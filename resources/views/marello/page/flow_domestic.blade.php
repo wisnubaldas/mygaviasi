@@ -3,7 +3,9 @@
  
 <div class="dark-wrapper">
     <div class="container inner bp0">
-        <h3 class="text-center">Flow Chart Kedatangan Cargo Domestic</h3>
+        <div class="section-title text-center">
+            <h2>Flow Chart Kedatangan Cargo Domestic</h2>
+        </div>
         <div class="text-center">
             @include('marello.component.kedatangan-domestik')
         </div>
@@ -12,7 +14,9 @@
 </div>
 <div class="dark-wrapper">
     <div class="container inner bp0">
-        <h3 class="text-center">Flow Chart Keberangkatan Cargo Domestic</h3>
+        <div class="section-title text-center">
+            <h2>Flow Chart Keberangkatan Cargo Domestic</h2>
+        </div>
         <div class="text-center">
             @include('marello.component.keberangkatan-domestik')
         </div>
