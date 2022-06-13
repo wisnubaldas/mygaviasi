@@ -1,6 +1,6 @@
 @extends('marello.app',['page'=>'Bageround'])
 @section('content')
-<div class="light-wrapper">
+<div class="inverse-wrapper">
     <div class="container inner">
       <div class="section-title">
         <h2>Background</h2>
@@ -11,6 +11,14 @@
             <em>Starting 2020 </em> new company born as ground handling provider as Aviation Business Partner<br><br>
         </p>
       </div>
+      
+      <!--/.row --> 
+      
+    </div>
+    <!-- /.container --> 
+  </div>
+  <div class="light-wrapper">
+    <div class="container inner">
       <div class="row text-center border-box">
         <div class="col-md-3 col-sm-6 wow fadeInUp animated" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
           <div class="box"> <span class="icon"><i class="budicon-network"></i></span>
@@ -34,9 +42,6 @@
         </div>
         <!--/column --> 
       </div>
-      <!--/.row --> 
-      
     </div>
-    <!-- /.container --> 
   </div>
 @endsection

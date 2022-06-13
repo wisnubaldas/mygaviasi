@@ -1,9 +1,10 @@
 @extends('marello.app',['page'=>'History'])
 @section('content')
-<div class="light-wrapper">
+<div class="dark-wrapper">
     <div class="container inner">
-      <h1>History</h1>
-      
+      <div class="text-center">
+        @include('marello.component.history')
+      </div>
     </div>
     <!-- /.container --> 
   </div>
