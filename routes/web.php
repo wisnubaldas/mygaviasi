@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\LandingController::class,'index']);
 Route::prefix(URI['landing'])->group(function(){
-    Route::get('/{any?}', [App\Http\Controllers\LandingController::class,'getPages']);
+    Route::match(['get', 'post'], '/{any?}', [App\Http\Controllers\LandingController::class,'getPages']);
 });
 Auth::routes();
 Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class,'logout']);

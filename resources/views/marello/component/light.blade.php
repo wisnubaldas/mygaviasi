@@ -8,13 +8,13 @@
       <div class="divide20"></div>
       <div class="row">
         <div class="col-sm-4 lp30 rp30 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.0s">
-          <div class="icon icon-m bm20"><img src="/style/images/icons/concept1.svg" alt="" /></div>
+          <div class="icon icon-m bm20"><img src="/style/images/icons/concept19.svg" alt="" /></div>
           <h4>Offering a wide of services</h4>
           <p>is a leading provider of ramp handling, offering a wide range of services to meet the unique needs of your airline.</p>
         </div>
         <!--/column -->
         <div class="col-sm-4 lp30 rp30 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-          <div class="icon icon-m bm20"><img src="/style/images/icons/concept2.svg" alt="" /></div>
+          <div class="icon icon-m bm20"><img src="/style/images/icons/concept17.svg" alt="" /></div>
           <h4>Efficiency is guaranteed for every flight.</h4>
           <p>This team expertly executes all functions to ensure a seamless experience and timely departure.</p>
         </div>

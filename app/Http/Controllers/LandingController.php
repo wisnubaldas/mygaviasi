@@ -10,7 +10,7 @@ class LandingController extends Controller
     {
         return view('welcome');
     }
-    public function getPages($page = null)
+    public function getPages($page = null,Request $request )
     {
         switch ($page) {
             case 'ramp':
@@ -45,7 +45,11 @@ class LandingController extends Controller
                 return view('marello.page.contact');
                 break;
             case 'track':
-                return view('marello.page.tract');
+                $dataTrack = null;
+                if($request->method() == 'POST'){
+                    $dataTrack = ['track!'];
+                }
+                return view('marello.page.tract', compact('dataTrack'));
                 break;
             default:
                 return abort(404);
