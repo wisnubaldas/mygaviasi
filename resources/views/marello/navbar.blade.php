@@ -14,7 +14,7 @@
         <!--/.social-wrapper -->
         <div class="navbar-brand text-center" style="padding: 0px;">
             <a href="/">
-                <img src="#" srcset="/style/images/logo.png 1x, /style/images/logo@2x.png 2x" alt="" />
+                <img src="#" srcset="/style/images/logo.png 1x, /style/images/logo.png 1x" alt="" />
             </a>
         </div>
         <ul class="info text-right">
