@@ -10,13 +10,13 @@
                             <div class="d-flex flex-column h-100">
                                 <div class="mb-4 mb-md-5 text-center">
                                     <a href="index.php" class="d-block auth-logo">
-                                        <img src="assets/images/logo-sm.svg" alt="" height="28"> <span class="logo-txt">Minia</span>
+                                        {{-- <img src="assets/images/logo-sm.svg" alt="" height="28"> <span class="logo-txt">Minia</span> --}}
                                     </a>
                                 </div>
                                 <div class="auth-content my-auto">
                                     <div class="text-center">
                                         <h5 class="mb-0">Welcome Back !</h5>
-                                        <p class="text-muted mt-2">Sign in to continue to Minia.</p>
+                                        <p class="text-muted mt-2">Sign in to continue.</p>
                                     </div>
                                     <form class="custom-form mt-4 pt-2" action="{{ route('login') }}" method="POST">
                                         @csrf
@@ -99,7 +99,7 @@
                                 <div class="mt-4 mt-md-5 text-center">
                                     <p class="mb-0">© <script>
                                             document.write(new Date().getFullYear())
-                                        </script> Minia . Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+                                        </script> WisnuBaldas<i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
                                 </div>
                             </div>
                         </div>

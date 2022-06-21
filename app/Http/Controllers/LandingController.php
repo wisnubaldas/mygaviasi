@@ -42,6 +42,9 @@ class LandingController extends Controller
                 return view('marello.page.license');
                 break;
             case 'contact':
+                if($request->method() == 'POST'){
+                    // return $request->all();
+                }
                 return view('marello.page.contact');
                 break;
             case 'track':

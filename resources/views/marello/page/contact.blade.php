@@ -7,12 +7,13 @@
       <div class="row">
         <div class="col-sm-8">
           <h2>Get in Touch</h2>
-          <p>send short messages suggestions and criticisms or questions about ramp, cargo and warehouse problems. 
+          <p>Send short messages suggestions and criticisms or questions about ramp, cargo and warehouse problems. 
             we are ready to serve you and provide solutions for the delivery of your company's 
             production, keep in touch with us through our contact and email.</p>
           <div class="divide10"></div>
           <div class="form-container">
-            <form action="contact/vanilla-form.php" method="post" class="vanilla vanilla-form" novalidate="novalidate">
+            <form action="/{{URI['landing']}}/contact" method="post" class="" novalidate="novalidate">
+              @csrf
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-field">
@@ -59,11 +60,21 @@
                 
                 <div class="col-sm-12">
                   <textarea name="message" placeholder="Type your message here..." required="required"></textarea>
+                  
+                </div>
+                <!--/column --> 
+                <div class="col-sm-6">
                   <input type="submit" class="btn btn-large" value="Submit Message" data-error="Fix errors" data-processing="Sending..." data-success="Thank you!">
                   <footer class="notification-box"></footer>
                 </div>
-                <!--/column --> 
-                
+                <div class="col-sm-6">
+                  {!! NoCaptcha::display(["data-badge"=>"inline"]) !!}
+                  @if ($errors->has('g-recaptcha-response'))
+                      <span class="help-block text-danger">
+                          <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                      </span>
+                  @endif
+                </div>
               </div>
               <!--/.row -->
               

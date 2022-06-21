@@ -290,7 +290,7 @@ trait ModelTrait
     }
     public static function menu()
     {
-        $admin = URI['admin'];
+        $admin = '/'.URI['admin'];
         return [
             [
                 'name' => 'Landing',
@@ -305,6 +305,18 @@ trait ModelTrait
                 'children'=>null,
             ],
             [
+                'name' => 'Tracking',
+                'icon' => 'home',
+                'link' => '#',
+                'children'=>[
+                    [
+                        'name' => 'Input Tracking',
+                        'icon' => 'home',
+                        'link' => $admin.'/track',
+                    ],
+                ],
+            ],
+            [
                 'name' => 'Settings',
                 'icon' => 'file-text',
                 'link' => '#',
@@ -312,12 +324,7 @@ trait ModelTrait
                     [
                         'name' => 'Profile',
                         'icon' => 'home',
-                        'link' => '/'.$admin.'/profile',
-                    ],
-                    [
-                        'name' => 'child2',
-                        'icon' => 'home',
-                        'link' => 'admin/child2',
+                        'link' => $admin.'/profile',
                     ],
                 ],
             ],

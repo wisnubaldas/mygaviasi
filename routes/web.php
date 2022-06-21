@@ -21,4 +21,8 @@ Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class,'logout'
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::prefix(URI['admin'])->group(function () {
     Route::get('/profile', [App\Http\Controllers\Admin\ProfileController::class, 'index']);
+    Route::post('/getTrack',[App\Http\Controllers\Admin\TrackingController::class, 'getTrack']);
+    Route::get('/track',[App\Http\Controllers\Admin\TrackingController::class, 'index']);
+    Route::post('/upload_data',[App\Http\Controllers\Admin\TrackingController::class, 'importExcel']);
+
 });

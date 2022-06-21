@@ -49,5 +49,7 @@
 <script type="text/javascript" src="/style/revolution/js/extensions/revolution.extension.video.min.js"></script> 
 <script type="text/javascript" src="/style/js/plugins.js"></script> 
 <script type="text/javascript" src="/style/js/scripts.js"></script>
+{!! NoCaptcha::renderJs() !!}
+
 </body>
 </html>
