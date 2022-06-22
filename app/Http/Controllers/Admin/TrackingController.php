@@ -13,6 +13,11 @@ class TrackingController extends Controller
     {
         return view('admin.tracking');
     }
+    public function list_track()
+    {
+        $track = Tracking::orderBy('created_at')->simplePaginate(9);   
+        return view('admin.track-list',compact('track'));
+    }
     public function importExcel(Request $request)
     {
         if ($request->hasFile('file')) {

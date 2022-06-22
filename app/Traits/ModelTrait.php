@@ -314,6 +314,11 @@ trait ModelTrait
                         'icon' => 'home',
                         'link' => $admin.'/track',
                     ],
+                    [
+                        'name' => 'List Tracking',
+                        'icon' => 'home',
+                        'link' => $admin.'/track-list',
+                    ],
                 ],
             ],
             [
