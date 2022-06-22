@@ -41,7 +41,8 @@
                             </div>
                             <div class="col-md-12">
                                 <hr/>
-                                <form method="post" action="" target="_blank">
+                                <form method="post" action="/{{URI['admin']}}/setTrack" target="_blank">
+                                    @csrf
                                     <div class="row">                                                            
                                         <div class="col-md-3">
                                             <div class="mb-3">
@@ -54,6 +55,10 @@
                                             <div class="mb-3">
                                                 <label class="form-label" for="formrow-email-input" >Flight</label>
                                                 <input name="flight" type="text" class="form-control" autocomplete="off">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label" for="formrow-email-input" >Weight</label>
+                                                <input name="weight" type="text" class="form-control" autocomplete="off">
                                             </div>
                                             
                                         </div>

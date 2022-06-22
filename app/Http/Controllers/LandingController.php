@@ -48,11 +48,7 @@ class LandingController extends Controller
                 return view('marello.page.contact');
                 break;
             case 'track':
-                $dataTrack = null;
-                if($request->method() == 'POST'){
-                    $dataTrack = ['track!'];
-                }
-                return view('marello.page.tract', compact('dataTrack'));
+                return view('marello.page.tract');
                 break;
             default:
                 return abort(404);

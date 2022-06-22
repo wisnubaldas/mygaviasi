@@ -19,23 +19,48 @@ class TrackingController extends Controller
             Excel::import(new TrackingImport, $request->file);
         }        
         
-        
     }
-    public function getTrack(Request $request)
+    public function setTrack(Request $request)
     {
+        $trk =  new Tracking;
+        $trk->flag = strtoupper($request->flag);
+        $trk->flight = $request->flight;
+        $trk->awb = self::str_clean($request->awb);
+        $trk->kolly = $request->kolly;
+        $trk->btb = $request->btb;
+        $trk->shipper = $request->shipper;
+        $trk->remarks = $request->remarks;
+        $trk->track_date = date('Y-m-d',strtotime($request->track_date));
+        $trk->weight = $request->weight;
+        $trk->save();
+        return back();
+    }
+    protected static function getTrack($flag,$request){
         $validated = $request->validate([
             'track' => 'required',
             'g-recaptcha-response' => 'required|captcha'
         ]);
         if ($validated) {
-            $track = preg_replace('/[^\w!@£]/', '', $request->track);
-            $track = Tracking::where('awb', $track)->first();
-            if($track){
-                return back()->with(['dataTrack' => $track]);
-            }else{
-                return back()->with(['error' => 'Data tidak ditemukan.']);
-            }
+            return Tracking::where('awb', self::str_clean($request->track))->where('flag',$flag)->first();
         }
+    }
+    public function getTrackExport(Request $request)
+    {
+        $data = self::getTrack('EXPORT',$request);
+        return view('marello.page.track-result',['track'=>$data]);
 
+    }
+    public function getTrackImport(Request $request)
+    {
+        $data = self::getTrack('IMPORT',$request);
+        return view('marello.page.track-result',['track'=>$data]);
+
+    }
+    public function searching(Request $request)
+    {
+        $orders = Tracking::search('Star Trek')->where('user_id', 1)->get();
+    }
+    protected static function str_clean($string){
+        return preg_replace('/[^\w!@£]/', '', $string);
     }
 }
