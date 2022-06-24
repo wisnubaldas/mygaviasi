@@ -5,8 +5,27 @@ namespace App\Traits;
  * trait for data structures
  */
 use App\Models\LandingSlide;
+use Carbon\Carbon;
 trait ModelTrait
 {
+    protected static function str_clean($string){
+        return preg_replace('/[^\w!@£]/', '', $string);
+    }
+    public static function rcfParse($data)
+    {
+        $result = array();
+        foreach ($data as $key => $v) {
+            $awb = substr_replace($v['awb'], '-',3,-strlen($v['awb']));
+            $date = Carbon::parse($v['track_date']);
+            $flight = self::str_clean($v['flight']);
+            $parse = $awb.'CGKSIN/'.$flight.'RFC/QZ0262/'.$date->day.strtoupper($date->englishMonth).$date->year.'/SIN/'.
+                    $flight.'//A1027';
+            array_push($result,$parse);
+            
+        }
+        return $result;
+    }
+
     public function getGalery()
     {
         return [

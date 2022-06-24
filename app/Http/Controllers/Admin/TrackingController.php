@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Models\Tracking;
 use App\Imports\TrackingImport;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Mail\MessageBroker;
+use Illuminate\Support\Facades\Mail;
+
 class TrackingController extends Controller
 {
     public function index()
@@ -20,9 +23,14 @@ class TrackingController extends Controller
     }
     public function importExcel(Request $request)
     {
+        
+
         if ($request->hasFile('file')) {
-            Excel::import(new TrackingImport, $request->file);
-        }        
+            $import = new TrackingImport;
+            Excel::import($import, $request->file);
+            $x = $import->getData();
+            Mail::to("wisnubaldas@gmail.com",)->send(new MessageBroker($this->rcfParse($x)));
+        }
         
     }
     public function setTrack(Request $request)
