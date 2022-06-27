@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\LandingController::class,'index']);
+Route::get('/mail',function ()
+{
+    return view('admin.mail-broker');
+});
+
 Route::prefix(URI['landing'])->group(function(){
     Route::match(['get', 'post'], '/{any?}', [App\Http\Controllers\LandingController::class,'getPages']);
 });

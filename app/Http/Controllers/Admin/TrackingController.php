@@ -23,7 +23,6 @@ class TrackingController extends Controller
     }
     public function importExcel(Request $request)
     {
-        
 
         if ($request->hasFile('file')) {
             $import = new TrackingImport;
