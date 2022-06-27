@@ -32,9 +32,9 @@
 
             <h4 class="font-size-16">This Week's Top Stories</h4>
             <p><strong>Subject: FSU....NSNSNSNSSN</strong></p>
-            {{-- @foreach ($data as $item)
-                <p>{{$item}}</p>
-            @endforeach --}}
+            @foreach ($data as $item)
+                {{$item}}<br>
+            @endforeach
             <hr>
             </div>
         </div>
