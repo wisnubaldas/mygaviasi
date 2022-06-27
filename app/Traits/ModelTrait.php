@@ -346,6 +346,11 @@ trait ModelTrait
                 'link' => '#',
                 'children'=>[
                     [
+                        'name' => 'Mailers',
+                        'icon' => 'home',
+                        'link' => $admin.'/mail-account',
+                    ],
+                    [
                         'name' => 'Profile',
                         'icon' => 'home',
                         'link' => $admin.'/profile',

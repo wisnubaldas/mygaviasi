@@ -26,12 +26,11 @@ Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class,'logout'
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::prefix(URI['admin'])->group(function () {
     Route::get('/profile', [App\Http\Controllers\Admin\ProfileController::class, 'index']);
+    Route::match(['get','post'],'/mail-account/{id?}', [App\Http\Controllers\Admin\ProfileController::class, 'mail_account'])->name('post_email');
     Route::post('/getTrackExport',[App\Http\Controllers\Admin\TrackingController::class, 'getTrackExport']);
     Route::post('/getTrackImport',[App\Http\Controllers\Admin\TrackingController::class, 'getTrackImport']);
     Route::post('/setTrack',[App\Http\Controllers\Admin\TrackingController::class, 'setTrack']);
     Route::get('/track',[App\Http\Controllers\Admin\TrackingController::class, 'index']);
     Route::post('/upload_data',[App\Http\Controllers\Admin\TrackingController::class, 'importExcel']);
     Route::get('/track-list',[App\Http\Controllers\Admin\TrackingController::class, 'list_track']);
-
-
 });

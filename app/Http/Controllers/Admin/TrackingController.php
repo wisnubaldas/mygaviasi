@@ -9,6 +9,7 @@ use App\Imports\TrackingImport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Mail\MessageBroker;
 use Illuminate\Support\Facades\Mail;
+use App\Models\MailClient;
 
 class TrackingController extends Controller
 {
@@ -28,7 +29,10 @@ class TrackingController extends Controller
             $import = new TrackingImport;
             Excel::import($import, $request->file);
             $x = $import->getData();
-            Mail::to("wisnubaldas@gmail.com",)->send(new MessageBroker($this->rcfParse($x)));
+            $clientMail = MailClient::all()->pluck('mail_name')->toArray();
+            foreach ($clientMail as $value) {
+                Mail::to($value)->send(new MessageBroker($this->rcfParse($x)));
+            }
         }
         
     }
