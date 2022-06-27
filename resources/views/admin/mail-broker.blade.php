@@ -116,7 +116,8 @@
                                           <table border="0" cellpadding="0" cellspacing="0" class="image_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
                                              <tr>
                                                 <td style="padding-top:20px;width:100%;padding-right:0px;padding-left:0px;">
-                                                   <div align="center" style="line-height:10px"><img class="big" src="images/illo-top.png" style="display: block; height: auto; border: 0; width: 386px; max-width: 100%;" width="386"/></div>
+                                                   <div align="center" style="line-height:10px">
+                                                      <img class="big" src="{{asset('assets/images/illo-top.png')}}" style="display: block; height: auto; border: 0; width: 386px; max-width: 100%;" width="386"/></div>
                                                 </td>
                                              </tr>
                                           </table>
@@ -237,7 +238,8 @@
                                           <table border="0" cellpadding="0" cellspacing="0" class="image_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
                                              <tr>
                                                 <td style="width:100%;padding-right:0px;padding-left:0px;">
-                                                   <div align="center" style="line-height:10px"><img class="big" src="images/HR-divider-image_bottom.png" style="display: block; height: auto; border: 0; width: 600px; max-width: 100%;" width="600"/></div>
+                                                   <div align="center" style="line-height:10px">
+                                                      <img class="big" src="{{asset('assets/images/HR-divider-image_bottom.png')}}" style="display: block; height: auto; border: 0; width: 600px; max-width: 100%;" width="600"/></div>
                                                 </td>
                                              </tr>
                                           </table>
