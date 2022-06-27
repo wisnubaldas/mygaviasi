@@ -20,18 +20,15 @@
     <div class="card">
         <div class="card-body">
             <div class="d-flex align-items-center mb-4">
-                <div class="flex-shrink-0 me-3">
-                    <img class="rounded-circle avatar-sm" src="{{asset('assets/images/users/avatar-2.jpg')}}" alt="Generic placeholder image">
-                </div>
+                
                 <div class="flex-grow-1">
-                    <h5 class="font-size-14 mb-0">Humberto D.
-                        Champion</h5>
-                    <small class="text-muted">support@domain.com</small>
+                    <h5 class="font-size-14 mb-0">MyGaviasi</h5>
+                    <small class="text-muted">zamzam.r@mygaviasi.com</small>
                 </div>
             </div>
 
             <h4 class="font-size-16">This Week's Top Stories</h4>
-            <p><strong>Subject: FSU....NSNSNSNSSN</strong></p>
+            <p><strong>Subject: FSU...</strong></p>
             @foreach ($data as $item)
                 {{$item}}<br>
             @endforeach
