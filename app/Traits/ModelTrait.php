@@ -18,8 +18,8 @@ trait ModelTrait
             $awb = substr_replace($v['awb'], '-',3,-strlen($v['awb']));
             $date = Carbon::parse($v['track_date']);
             $flight = self::str_clean($v['flight']);
-            $parse = $awb.'CGKSIN/'.$flight.'RFC/QZ0262/'.$date->day.strtoupper($date->englishMonth).$date->year.'/SIN/'.
-                    $flight.'//A1027';
+            $parse = $awb.'CGK'.$v['destination'].'/'.$flight.'RFC/QZ0262/'.$date->day.strtoupper($date->englishMonth).$date->year.'/'.$v['destination'].'/'.
+                    $flight;
             array_push($result,$parse);
             
         }
@@ -329,9 +329,14 @@ trait ModelTrait
                 'link' => '#',
                 'children'=>[
                     [
-                        'name' => 'Input Tracking',
+                        'name' => 'Export',
                         'icon' => 'home',
-                        'link' => $admin.'/track',
+                        'link' => $admin.'/track/export',
+                    ],
+                    [
+                        'name' => 'Import',
+                        'icon' => 'home',
+                        'link' => $admin.'/track/import',
                     ],
                     [
                         'name' => 'List Tracking',

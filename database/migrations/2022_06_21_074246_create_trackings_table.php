@@ -16,16 +16,17 @@ class CreateTrackingsTable extends Migration
         Schema::create('trackings', function (Blueprint $table) {
             $table->id();
             $table->string('awb');
-            $table->string('flight');
-            $table->date('track_date');
+            $table->string('flight')->nullable();
+            $table->date('track_date')->nullable();
             $table->integer('kolly');
             $table->integer('weight');
             $table->string('btb');
             $table->string('shipper');
             $table->string('remarks');
-            $table->string('flag');
+            $table->string('flag')->nullable();
+            $table->string('destination')->nullable();
             $table->timestamps();
-            $table->unique(['awb']);
+            // $table->unique(['awb']);
         });
     }
 

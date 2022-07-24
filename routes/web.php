@@ -30,7 +30,7 @@ Route::prefix(URI['admin'])->group(function () {
     Route::post('/getTrackExport',[App\Http\Controllers\Admin\TrackingController::class, 'getTrackExport']);
     Route::post('/getTrackImport',[App\Http\Controllers\Admin\TrackingController::class, 'getTrackImport']);
     Route::post('/setTrack',[App\Http\Controllers\Admin\TrackingController::class, 'setTrack']);
-    Route::get('/track',[App\Http\Controllers\Admin\TrackingController::class, 'index']);
+    Route::get('/track/{status}',[App\Http\Controllers\Admin\TrackingController::class, 'index']);
     Route::post('/upload_data',[App\Http\Controllers\Admin\TrackingController::class, 'importExcel']);
     Route::get('/track-list',[App\Http\Controllers\Admin\TrackingController::class, 'list_track']);
 });

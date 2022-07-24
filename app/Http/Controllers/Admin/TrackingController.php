@@ -13,10 +13,22 @@ use App\Models\MailClient;
 
 class TrackingController extends Controller
 {
-    public function index()
+    public function index($tracking)
     {
-        return view('admin.tracking');
+        switch ($tracking) {
+            case 'import':
+                $track_status = $tracking;
+                break;
+            case 'export':
+                $track_status = $tracking;
+                break;
+            default:
+                $track_status = null;
+                break;
+        }        
+        return view('admin.tracking',compact('track_status'));
     }
+
     public function list_track()
     {
         $track = Tracking::orderBy('created_at')->simplePaginate(9);   
@@ -27,6 +39,7 @@ class TrackingController extends Controller
 
         if ($request->hasFile('file')) {
             $import = new TrackingImport;
+            $import->tracking_status = $request->flag;
             Excel::import($import, $request->file);
             $x = $import->getData();
             $clientMail = MailClient::all()->pluck('mail_name')->toArray();

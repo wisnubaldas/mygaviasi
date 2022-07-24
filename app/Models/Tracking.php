@@ -12,7 +12,7 @@ use Laravel\Scout\Searchable;
 class Tracking extends Model
 {
     use HasFactory, Searchable;
-    protected $fillable = ['awb','flight','track_date','kolly','weight','btb','shipper','remarks','flag'];
+    protected $fillable = ['awb','flight','track_date','kolly','weight','btb','shipper','remarks','flag','destination'];
 
     // #[SearchUsingPrefix(['id', 'email'])]
     // #[SearchUsingFullText(['bio'])]

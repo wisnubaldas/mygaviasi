@@ -27,6 +27,9 @@
                                     <div class="fallback">
                                         <input name="file" type="file" multiple="multiple">
                                     </div>
+                                    @if ($track_status)
+                                        <input name="flag" type="text"  hidden>
+                                    @endif
                                     <div class="dz-message needsclick">
                                         <div class="mb-3">
                                             <i class="display-4 text-muted bx bx-cloud-upload"></i>
@@ -45,13 +48,9 @@
                                     @csrf
                                     <div class="row">                                                            
                                         <div class="col-md-3">
-                                            <div class="mb-3">
-                                                <label class="form-label" for="formrow-email-input">Status</label>
-                                                <select class="form-select" name="flag" type="text">
-                                                    <option value="import">Import</option>
-                                                    <option value="export">Export</option>
-                                                </select>
-                                            </div>
+                                            @if ($track_status)
+                                                    <input name="flag" type="text"  hidden>
+                                            @endif
                                             <div class="mb-3">
                                                 <label class="form-label" for="formrow-email-input" >Flight</label>
                                                 <input name="flight" type="text" class="form-control" autocomplete="off">
